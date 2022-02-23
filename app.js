@@ -11,6 +11,10 @@ function Film(başlık, yönetmen, link) {
   this.link = link;
 }
 
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 function UI() {
 
 }
@@ -34,9 +38,27 @@ UI.prototype.girdileriTemizleme = function(e1,e2,e3) {
   e1.value = "";
   e2.value = "";
   e3.value = "";
+};
+
+UI.prototype.bilgilendirmeMesajı = function(mesaj,tür) {
+  const div = document.createElement("div");
+
+  div.className = `alert alert-${tür}`;
+  div.textContent = mesaj;
+  div.setAttribute("role","alert");
+
+  formSubmit.appendChild(div);
+
+  setTimeout(() => {
+    div.remove();
+  }, 2000);
 }
 
 const ui = new UI();
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 tümEventler();
 
@@ -52,11 +74,12 @@ function filmEkleme(e) {
 
   
   if (başlık === "" || yönetmen === "" || link === "") {
-    alert("olmaz")
+    ui.bilgilendirmeMesajı("Lütfen Eksik bilgi bırakmayınız...","danger")
   } else {
     const yeniFilm = new Film(başlık, yönetmen, link);
     console.log(yeniFilm);
     ui.yeniFilmEkleme(yeniFilm); //arayüze yeni film ekleme
+    ui.bilgilendirmeMesajı("Film başarıyla eklendi...","success")
 
   }
 
