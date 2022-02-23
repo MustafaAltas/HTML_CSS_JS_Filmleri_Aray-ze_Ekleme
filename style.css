@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EEEDDE;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.container {
+    width: 70%;
+    min-width: 22rem;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#form {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 5px double black;
+    padding: 5px;
+    border-bottom-left-radius: 30px;
+}
+.liste {
+    height: 320px;
+    overflow: auto;
+}
+.tablo {
+    width: 75%;
+    margin: auto;
+    border: 1px solid black;
+}
+#thead {
+    background-color: #876445;
+    color: white;
+    height: 4rem;
+    text-align: center;
+}
+.tbody-tr, .thead-tr {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+.tbody-tr {
+    background-color: #876445;
+    color: white;
+}
+.tbody-tr button {
+    background-color: #FC4F4F;
+    width: 5rem;
+    font-weight: 500;
+    border-radius: 10px;
+}
+.thead-tr {
+    background-color: #876445;
+    padding-top: 20px;
+}
+.content1 {
+    text-align: center;
+    padding-top: 15px;
+}
+
+input {
+    width: 15rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 10px;
+}
+.submit {
+    border: 1px inset black;
+    width: 5rem;
+    background-color: #FC4F4F;
+}
+.submit:hover {
+    background-color: #FFBC80;
+    border: 1px inset black;
+}
+

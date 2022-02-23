@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Film Listesi</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Architects+Daughter&family=Bowlby+One+SC&family=Cairo:wght@300&family=Changa:wght@200&family=EB+Garamond&family=Geo&family=Indie+Flower&family=Lato:wght@100;400&family=Lobster+Two&family=Luckiest+Guy&family=Mochiy+Pop+P+One&family=Montagu+Slab:wght@500&family=Montserrat:wght@300;400;500&family=Neonderthaw&family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300&family=Orbitron&family=Permanent+Marker&family=Raleway:ital,wght@1,300&family=Roboto:wght@300&family=Rubik+Beastly&family=Syne+Tactile&family=Teko:wght@300;700&family=Viaoda+Libre&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <form action="#" id="form">
+        <label for="film">Fİlm Adı:</label>
+        <input
+          type="text"
+          name="film"
+          id="film"
+          placeholder="Lütfen Film Adını Giriniz."
+        />
+        <label for="yönetmen">Yönetmen Adı:</label>
+        <input
+          type="text"
+          name="yönetmen"
+          id="yönetmen"
+          placeholder="Lütfen Yönetmen Adını Giriniz."
+        />
+        <label for="url">Film Resim Linki:</label>
+        <input
+          type="url"
+          name="url"
+          id="url"
+          placeholder="Lütfen Resim URL'ini yazınız."
+        />
+        <input type="submit" value="Ekle" class="submit" />
+      </form>
+      <div class="liste">
+        <table class="tablo">
+          <thead id="thead">
+            <tr class="thead-tr">
+              <th>Film Afişi</th>
+              <th>Film Adı</th>
+              <th>Yönetmen Adı</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+          <tr class="tbody-tr">
+            <!-- <td>
+              <img
+                src="https://i2.gazetevatan.com/i/gazetevatan/75/0x410/61b4c0277f58a1713613c159.jpg"
+                alt=""
+                width="100%"
+              />
+            </td>
+            <td class="content1">asdas</td>
+            <td class="content1">asdas</td>
+            <td class="content1"><button>Kaldır</button></td>
+          </tr> -->
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
