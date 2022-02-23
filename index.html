@@ -15,7 +15,7 @@
   </head>
   <body>
     <main class="container">
-      <form action="#" id="form">
+      <form id="form">
         <label for="film">Fİlm Adı:</label>
         <input
           type="text"
@@ -32,12 +32,12 @@
         />
         <label for="url">Film Resim Linki:</label>
         <input
-          type="url"
+          type="text"
           name="url"
           id="url"
           placeholder="Lütfen Resim URL'ini yazınız."
         />
-        <input type="submit" value="Ekle" class="submit" />
+        <button type="submit" class="submit">Ekle</button>
       </form>
       <div class="liste">
         <table class="tablo">
@@ -49,21 +49,31 @@
               <th></th>
             </tr>
           </thead>
-          <tbody id="tbody"></tbody>
-          <tr class="tbody-tr">
-            <!-- <td>
+          <tbody id="tbody">
+            <!-- <tr class="tbody-tr">
+              <td>
+                <img src="https://i.ytimg.com/vi/t05TxubDcbs/sddefault.jpg" alt="" width="100%" />
+              </td>
+              <td class="content1"></td>
+              <td class="content1"></td>
+              <td class="content1"><button>Kaldır</button></td>
+            </tr> -->
+          </tbody>
+          <!-- <tr class="tbody-tr">
+            <td>
               <img
                 src="https://i2.gazetevatan.com/i/gazetevatan/75/0x410/61b4c0277f58a1713613c159.jpg"
                 alt=""
                 width="100%"
               />
             </td>
-            <td class="content1">asdas</td>
-            <td class="content1">asdas</td>
+            <td class="content1"></td>
+            <td class="content1"></td>
             <td class="content1"><button>Kaldır</button></td>
           </tr> -->
         </table>
       </div>
     </main>
+    <script src="./app.js"></script>
   </body>
 </html>
