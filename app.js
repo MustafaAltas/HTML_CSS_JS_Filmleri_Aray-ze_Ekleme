@@ -70,6 +70,8 @@ const ui = new UI();
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
+// aşağıda tümEventler fonksiyonu ile tüm eventler içine yazıldı.
 tümEventler();
 
 function tümEventler() {
@@ -77,7 +79,10 @@ function tümEventler() {
   tableList.addEventListener("click",filmSİl);
   kompleSilme.addEventListener("click",kompleFilmSil)
 
-}
+};
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 function filmEkleme(e) {
   const başlık = filmİsim.value;

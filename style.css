@@ -42,7 +42,7 @@ body {
     border: 1px solid black;
 }
 #thead {
-    background-color: #876445;
+    background-color: #203239;
     color: white;
     height: 4rem;
     text-align: center;
@@ -53,7 +53,7 @@ body {
     gap: 10px;
 }
 .tbody-tr{
-    background-color: #876445;
+    background-color: #203239;
     color: white;
     border: 1px solid black;
 }
@@ -64,7 +64,7 @@ body {
     border-radius: 10px;
 }
 .thead-tr {
-    background-color: #876445;
+    background-color: #203239;
     padding-top: 20px;
 }
 .content1 {
@@ -93,5 +93,28 @@ input {
     width: 70px;
     background-color: #FC4F4F;
     border-radius: 10px;
+}
+
+@media screen and (max-width:700px) and (min-width:500px) {
+    .container {
+        width: 90%;
+    }
+    #form {
+        width: 90%;
+    }
+    .tablo {
+        width: 90%;
+    }
+}
+@media screen and (max-width:500px) {
+    .container {
+        width: 90%;
+    }
+    #form {
+        width: 90%;
+    }
+    .tablo {
+        width: 90%;
+    }
 }
 
