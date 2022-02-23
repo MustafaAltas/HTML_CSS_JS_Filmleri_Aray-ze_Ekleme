@@ -89,3 +89,9 @@ input {
     border: 1px inset black;
 }
 
+#komplesilme {
+    width: 70px;
+    background-color: #FC4F4F;
+    border-radius: 10px;
+}
+

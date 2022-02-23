@@ -2,7 +2,9 @@ const formSubmit = document.getElementById("form");
 const filmİsim = document.getElementById("film");
 const yönetmenİsim = document.getElementById("yönetmen");
 const linkİsim = document.getElementById("url");
-
+const tableList = document.querySelector(".liste");
+const kompleSilme = document.getElementById("komplesilme");
+const tBody = document.getElementById("tbody");
 
 //film constructor
 function Film(başlık, yönetmen, link) {
@@ -22,7 +24,6 @@ function UI() {
 UI.prototype.yeniFilmEkleme = function (yeniFilm) {
   const tbodyEkleme = document.getElementById("tbody");
 
-  console.log(yeniFilm.link);
   tbodyEkleme.innerHTML += `          
   <tr class="tbody-tr">
     <td>
@@ -30,7 +31,7 @@ UI.prototype.yeniFilmEkleme = function (yeniFilm) {
     </td>
     <td class="content1">${yeniFilm.başlık}</td>
     <td class="content1">${yeniFilm.yönetmen}</td>
-    <td class="content1"><button>Kaldır</button></td>
+    <td class="content1"><button id = "kaldır">Kaldır</button></td>
   </tr>`
 };
 
@@ -51,7 +52,16 @@ UI.prototype.bilgilendirmeMesajı = function(mesaj,tür) {
 
   setTimeout(() => {
     div.remove();
-  }, 2000);
+  }, 700);
+}
+UI.prototype.filmiSilmeİşlemi = function(e) {
+  e.parentElement.parentElement.remove();
+};
+
+UI.prototype.filmleriKompleSil = function() {
+  while(tBody.firstElementChild !== null) {
+    tBody.firstElementChild.remove();
+  }
 }
 
 const ui = new UI();
@@ -64,6 +74,9 @@ tümEventler();
 
 function tümEventler() {
   formSubmit.addEventListener("submit", filmEkleme);
+  tableList.addEventListener("click",filmSİl);
+  kompleSilme.addEventListener("click",kompleFilmSil)
+
 }
 
 function filmEkleme(e) {
@@ -77,7 +90,6 @@ function filmEkleme(e) {
     ui.bilgilendirmeMesajı("Lütfen Eksik bilgi bırakmayınız...","danger")
   } else {
     const yeniFilm = new Film(başlık, yönetmen, link);
-    console.log(yeniFilm);
     ui.yeniFilmEkleme(yeniFilm); //arayüze yeni film ekleme
     ui.bilgilendirmeMesajı("Film başarıyla eklendi...","success")
 
@@ -85,4 +97,16 @@ function filmEkleme(e) {
 
   ui.girdileriTemizleme(filmİsim,yönetmenİsim,linkİsim);
   e.preventDefault();
+};
+
+
+//eklenen filmi silme işlemini burada gerçekleştiriyoruz.
+function filmSİl(e) {
+  if (e.target.id === "kaldır") {
+    ui.filmiSilmeİşlemi(e.target)
+  }
+}
+
+function kompleFilmSil() {
+  ui.filmleriKompleSil();
 }
